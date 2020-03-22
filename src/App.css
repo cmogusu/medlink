@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+body.home {
+  background: #eee;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo {
+  width: 120px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.et_header_style_left #et-top-navigation nav>ul>li>a,
+.et_header_style_split #et-top-navigation nav>ul>li>a {
+  padding-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.table-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 120px auto 50px;
+  padding: 100px 90px;
+  background: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.table-container h1.table-container__title {
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-container hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.total-income__floating {
+  position: sticky;
+  top: 20px;
+}
+
+.ant-input-number.total-income__input {
+  width: 100%;
+}
+
+.ant-input-number.table__input {
+  width: 100%;
+  border: none;
+}
+
+.table__input input{
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+}
+
+.totals .totals__row1 {
+  margin-bottom: 20px;
 }
