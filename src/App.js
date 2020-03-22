@@ -91,6 +91,7 @@ class App extends Component {
               formatter={inputValueFormatter}
               parser={inputValueParser}
               placeholder="0.00"
+              min={0}
               value={value}
               onChange={this.handleOnChange(key)}
             />
@@ -101,19 +102,20 @@ class App extends Component {
   ]
 
   getTextAndIcon(percentageExpenses) {
-    let Icon = () => null
-    let color = ''
-    if (!percentageExpenses) return '0 %'
-
+    let Icon
+    let color
     if (percentageExpenses >= 90) {
       Icon = ExclamationCircleOutlined
       color = 'red'
     } else if (percentageExpenses >= 70) {
       Icon = WarningOutlined
       color = '#faad14'
-    } else if (percentageExpenses >= 50) {
+    } else if (percentageExpenses > 0) {
       Icon = CheckCircleOutlined
       color = 'green'
+    } else {
+      Icon = () => null
+      color = 'initial'
     }
 
     return (
@@ -198,6 +200,7 @@ class App extends Component {
                     className="total-income__input"
                     formatter={inputValueFormatter}
                     parser={inputValueParser}
+                    min={0}
                     placeholder="Total income"
                     value={totalCollected}
                     onChange={this.handleTotalIncomeChange}

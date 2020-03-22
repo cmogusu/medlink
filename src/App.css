@@ -31,7 +31,7 @@ body.home {
 
 .total-income__floating {
   position: sticky;
-  top: 20px;
+  top: 100px;
 }
 
 .ant-input-number.total-income__input {
