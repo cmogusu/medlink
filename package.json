@@ -1,6 +1,7 @@
 {
   "name": "medlink",
   "version": "0.1.0",
+  "homepage": "/sites/medlink",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.0.3",
